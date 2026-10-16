@@ -45,17 +45,21 @@ public class EventService {
 
     public void viewEvents()
     {
+        final String ANSI_RESET = "\u001B[0m";
+        final String ANSI_CYAN = "\u001B[36m";
+        final String ANSI_PURPLE = "\u001B[35m";
 
-        System.out.println("\n------ EVENTS ------");
+        System.out.println("\n" + ANSI_CYAN + "------ EVENTS ------" + ANSI_RESET);
 
         for(SecurityEvent e : DataStore.events)
         {
             System.out.println("------------------------");
-            System.out.println("User : "+e.getUsername());
+            System.out.println("Time  : " + ANSI_PURPLE + e.getFormattedTimestamp() + ANSI_RESET);
+            System.out.println("User  : "+e.getUsername());
             System.out.println("Event : "+e.getEventType());
-            System.out.println("IP : "+e.getIpAddress());
+            System.out.println("IP    : "+e.getIpAddress());
         }
-
+        System.out.println("------------------------");
     }
 
 }

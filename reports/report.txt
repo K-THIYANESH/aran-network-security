@@ -1,0 +1,14 @@
+ARAN CLI REPORT
+
+User : dave
+Event : Malware
+IP : 10.0.0.99
+----------------------
+User : dinesh
+Event : Login Failure
+IP : 198.198.2.7
+----------------------
+User : thiyanesh
+Event : Login Failure
+IP : 198.198.2.8
+----------------------

@@ -9,6 +9,10 @@ public class ReportService {
         try
         {
 
+            java.io.File dir = new java.io.File("reports");
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
             FileWriter fw = new FileWriter("reports/report.txt");
 
             fw.write("ARAN CLI REPORT\n\n");
